@@ -2,7 +2,7 @@
 
 Site web interactif du Musée des Civilisations Noires (MCN) de Dakar : galerie d'œuvres, billetterie en ligne, événements, livre d'or, et espace administrateur.
 
-**Site en ligne :** _(ajoute ton URL Vercel ici une fois définitive)_
+**Site en ligne :** _https://musee-dakar-dist-v3.vercel.app/_
 
 ## ✨ Fonctionnalités
 
