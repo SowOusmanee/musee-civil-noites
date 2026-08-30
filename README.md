@@ -27,21 +27,21 @@ Site web interactif du Musée des Civilisations Noires (MCN) de Dakar : galerie 
 
 **Prérequis :** [Node.js](https://nodejs.org/) (version 18 ou plus)
 
-```bash
+\`\`\`bash
 # 1. Installer les dépendances
 npm install
 
 # 2. Lancer le serveur de développement
 npm run dev
-```
+\`\`\`
 
 Le site est alors accessible sur `http://localhost:3000`.
 
 Pour vérifier que tout compile sans erreur avant de publier :
 
-```bash
+\`\`\`bash
 npm run build
-```
+\`\`\`
 
 ## 🔥 Configuration Firebase
 
