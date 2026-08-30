@@ -1,0 +1,6 @@
+{
+  "name": "Musée des Civilisations Noires - Dakar",
+  "description": "Plateforme digitale interactive du Musée des Civilisations Noires de Dakar (MCN) : galerie d'œuvres, billetterie en ligne, événements du jour et visites immersives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-base: #0A0A0A;
+    --color-bg-surface: #14100E;
+    --color-bg-surface-elevated: #1A1310;
+    --color-border-subtle: #2D241F;
+    --color-border-accent: #3D2B22;
+    --color-gold: #D4AF37;
+    --color-gold-bright: #E5C158;
+    --color-terracotta: #9B3922;
+    --color-terracotta-light: #E2725B;
+    --color-text-primary: #F2E8DF;
+    --color-text-muted: #8B735B;
+    --color-text-subtle: #5A4A42;
+  }
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif-lux {
+  font-family: 'Cinzel', serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Sleek Interface Pattern Overlays */
+.bg-sleek-lines {
+  background-image: repeating-linear-gradient(45deg, #D4AF37 0px, #D4AF37 1px, transparent 1px, transparent 12px);
+}
+
+.bg-mcn-pattern {
+  background-color: #0A0A0A;
+  background-image: radial-gradient(#9B3922 0.75px, transparent 0.75px), radial-gradient(#D4AF37 0.75px, #0A0A0A 0.75px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+.bg-kuba-subtle {
+  background-image: linear-gradient(135deg, rgba(155, 57, 34, 0.06) 25%, transparent 25%), 
+                    linear-gradient(225deg, rgba(155, 57, 34, 0.06) 25%, transparent 25%), 
+                    linear-gradient(45deg, rgba(212, 175, 55, 0.06) 25%, transparent 25%), 
+                    linear-gradient(315deg, rgba(212, 175, 55, 0.06) 25%, transparent 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 24px 24px;
+  background-repeat: repeat;
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.shadow-gold-glow-lg {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+/* Sleek Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D241F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+

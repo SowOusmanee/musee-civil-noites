@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Artworks collection: Public read, open write for museum staff/management
+    match /artworks/{artworkId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Ticket types & Pricing
+    match /ticketTypes/{ticketTypeId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Museum Events & Exhibitions
+    match /events/{eventId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Booked Tickets & Gate validation
+    match /bookedTickets/{ticketId} {
+      allow read: if true;
+      allow create, update: if true;
+      allow delete: if true;
+    }
+    
+    // User accounts
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Livre d'or (Guestbook Reviews)
+    match /guestbookReviews/{reviewId} {
+      allow read: if true;
+      allow create, update, delete: if true;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "entities": {
+    "artworks": {
+      "title": "Artwork",
+      "description": "Museum artwork collection",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "artist": { "type": "string" },
+        "year": { "type": "string" },
+        "origin": { "type": "string" },
+        "medium": { "type": "string" },
+        "gallery": { "type": "string" },
+        "floor": { "type": "number" },
+        "description": { "type": "string" },
+        "historicalContext": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "audioGuideUrl": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "featured": { "type": "boolean" },
+        "isMasterpiece": { "type": "boolean" }
+      },
+      "required": ["title", "artist", "origin", "gallery"]
+    },
+    "ticketTypes": {
+      "title": "TicketType",
+      "description": "Museum ticket types and rates",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "priceCFA": { "type": "number" },
+        "priceEUR": { "type": "number" },
+        "includes": { "type": "array", "items": { "type": "string" } },
+        "popular": { "type": "boolean" }
+      },
+      "required": ["name", "priceCFA", "priceEUR"]
+    },
+    "events": {
+      "title": "MuseumEvent",
+      "description": "Exhibitions and cultural events",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "location": { "type": "string" },
+        "floor": { "type": "number" },
+        "priceCFA": { "type": "number" },
+        "description": { "type": "string" }
+      },
+      "required": ["title", "date", "time"]
+    },
+    "bookedTickets": {
+      "title": "BookedTicket",
+      "description": "Issued visitor admission tickets and QR codes",
+      "type": "object",
+      "properties": {
+        "ticketId": { "type": "string" },
+        "ticketTypeId": { "type": "string" },
+        "ticketTypeName": { "type": "string" },
+        "visitorName": { "type": "string" },
+        "visitorEmail": { "type": "string" },
+        "visitDate": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "quantity": { "type": "number" },
+        "totalPriceCFA": { "type": "number" },
+        "qrCodeUrl": { "type": "string" },
+        "status": { "type": "string" },
+        "validatedAt": { "type": "string" }
+      },
+      "required": ["ticketId", "visitorName", "totalPriceCFA"]
+    },
+    "users": {
+      "title": "UserProfile",
+      "description": "User profiles and preferences",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "fullName": { "type": "string" },
+        "accountType": { "type": "string" },
+        "favorites": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["id", "email", "fullName"]
+    },
+    "guestbookReviews": {
+      "title": "Guestbook Reviews",
+      "description": "Visitor reviews and testimonials with verified museum ticket authentication",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "userCountry": { "type": "string" },
+        "rating": { "type": "number" },
+        "experienceCategory": { "type": "string" },
+        "comment": { "type": "string" },
+        "ticketId": { "type": "string" },
+        "ticketTypeName": { "type": "string" },
+        "visitDate": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "likesCount": { "type": "number" },
+        "likedBy": { "type": "array", "items": { "type": "string" } },
+        "isVerifiedVisitor": { "type": "boolean" }
+      },
+      "required": ["id", "userName", "rating", "comment", "createdAt"]
+    }
+  },
+  "firestore": {
+    "artworks/{artworkId}": {
+      "schema": "artworks",
+      "description": "Artwork documents"
+    },
+    "ticketTypes/{ticketTypeId}": {
+      "schema": "ticketTypes",
+      "description": "Ticket rates and packages"
+    },
+    "events/{eventId}": {
+      "schema": "events",
+      "description": "Events and symposiums"
+    },
+    "bookedTickets/{ticketId}": {
+      "schema": "bookedTickets",
+      "description": "All ticket orders and gate validation records"
+    },
+    "users/{userId}": {
+      "schema": "users",
+      "description": "User profile data"
+    },
+    "guestbookReviews/{reviewId}": {
+      "schema": "guestbookReviews",
+      "description": "Verified visitor testimonials and ratings in Livre d'or"
+    }
+  }
+}
